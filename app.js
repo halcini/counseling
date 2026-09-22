@@ -564,9 +564,18 @@ function initScrollAnimations() {
   ];
 
   const elementsToAnimate = document.querySelectorAll(targetSelectors.join(', '));
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-  // Tilldela reveal-klasser och staggered delays
-  elementsToAnimate.forEach((el, index) => {
+  // Tilldela reveal-klasser endast till element under folden för att eliminera CLS
+  elementsToAnimate.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    const isAboveTheFold = rect.top < viewportHeight;
+
+    if (isAboveTheFold) {
+      el.classList.add('is-visible');
+      return;
+    }
+
     if (!el.classList.contains('reveal-on-scroll')) {
       el.classList.add('reveal-on-scroll');
 
@@ -582,7 +591,7 @@ function initScrollAnimations() {
     }
   });
 
-  // IntersectionObserver
+  // IntersectionObserver för element som scrollas in
   if ('IntersectionObserver' in window) {
     const observerOptions = {
       root: null,
@@ -594,12 +603,16 @@ function initScrollAnimations() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // Animera en gång för ren och professionell upplevelse
+          observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    elementsToAnimate.forEach(el => revealObserver.observe(el));
+    elementsToAnimate.forEach(el => {
+      if (el.classList.contains('reveal-on-scroll')) {
+        revealObserver.observe(el);
+      }
+    });
   } else {
     // Fallback om webbläsaren inte stöder IntersectionObserver
     elementsToAnimate.forEach(el => el.classList.add('is-visible'));
