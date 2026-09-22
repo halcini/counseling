@@ -6,31 +6,59 @@
   <title>Livsstöd & Ceremonier | Familjerådgivning, Vigselförrättare & Social Rådgivning</title>
   <meta name="description" content="Helhetsstöd genom livets alla skeden: Personlig borgerlig vigsel, professionell familje- och parrådgivning samt erfaren social rådgivning med socionomkompetens och tystnadsplikt.">
   <meta name="keywords" content="familjerådgivning, vigselförrättare, social rådgivning, borgerlig vigsel, parterapi, socionom, krisstöd, hindersprövning">
+  <link rel="canonical" href="https://livsstod-ceremonier.se/">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (Optimized & Non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  </noscript>
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Livsstöd & Ceremonier",
+    "description": "Helhetsstöd genom livets alla skeden: Personlig borgerlig vigsel, professionell familje- och parrådgivning samt social rådgivning med socionomkompetens.",
+    "image": "logo.png",
+    "telephone": "+46812345678",
+    "email": "kontakt@livsstod-ceremonier.se",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Drottninggatan 42",
+      "addressLocality": "Stockholm",
+      "addressCountry": "SE"
+    },
+    "priceRange": "950 kr - 2900 kr"
+  }
+  </script>
 </head>
-<body>
+<body id="top">
 
   <!-- ==========================================================================
        Header & Navigering
        ========================================================================== -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="#" class="brand-logo" aria-label="Livsstöd & Ceremonier Hem">
-        <img src="logo.png" alt="Livsstöd & Ceremonier Logotyp" class="brand-logo-img">
+      <a href="#top" class="brand-logo" aria-label="Livsstöd & Ceremonier Hem">
+        <picture>
+          <source srcset="logo.webp" type="image/webp">
+          <img src="logo.png" alt="Livsstöd & Ceremonier Logotyp" class="brand-logo-img" width="44" height="44" decoding="async">
+        </picture>
         <span>Livsstöd & Ceremonier</span>
       </a>
 
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenu" aria-label="Huvudnavigation">
         <a href="#tjanster" class="nav-link">Tjänster</a>
         <a href="#helhetssyn" class="nav-link">Helhetssyn</a>
         <a href="#bokning" class="nav-link">Behovsguide</a>
@@ -42,18 +70,18 @@
       </nav>
 
       <div class="nav-actions">
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Växla färgtema" title="Växla ljust/mörkt läge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Växla färgtema (ljust eller mörkt läge)" title="Växla ljust/mörkt läge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
 
         <a href="#bokning" class="btn btn-primary">
           <span>Boka rådgivning</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
 
-        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Öppna navigationsmeny">
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Öppna navigationsmeny" aria-expanded="false" aria-controls="navMenu">
           <span></span>
           <span></span>
           <span></span>
@@ -304,10 +332,10 @@
           <div class="timeline-step">
             <div class="timeline-bullet"></div>
             <div class="timeline-box">
-              <h4>
+              <h3>
                 <span>1. Kärleken & Löftet (Vigsel)</span>
                 <span class="badge badge-gold">Starten</span>
-              </h4>
+              </h3>
               <p>Ni bygger er grund och bekräftar ert förbund. Här skapar vi en personlig och trygg ceremoni som speglar era unika värderingar.</p>
             </div>
           </div>
@@ -315,10 +343,10 @@
           <div class="timeline-step">
             <div class="timeline-bullet"></div>
             <div class="timeline-box">
-              <h4>
+              <h3>
                 <span>2. Vardagen & Relationerna (Familjestöd)</span>
                 <span class="badge badge-sage">Växten</span>
-              </h4>
+              </h3>
               <p>När vardagspussel, föräldraskap eller kommunikationskrockar uppstår erbjuder vi förebyggande samtal och verktyg för att stärka banden.</p>
             </div>
           </div>
@@ -326,10 +354,10 @@
           <div class="timeline-step">
             <div class="timeline-bullet"></div>
             <div class="timeline-box">
-              <h4>
+              <h3>
                 <span>3. Trygghet i Motvind (Social Rådgivning)</span>
                 <span class="badge badge-terracotta">Stabilitet</span>
-              </h4>
+              </h3>
               <p>Om oförutsedda kriser, sjukdom eller myndighetsfrågor uppstår finns socionomkompetensen som en trygg lots i samhällssystemet.</p>
             </div>
           </div>
@@ -408,17 +436,17 @@
             <p class="step-desc">Välj det område som bäst beskriver er nuvarande situation.</p>
 
             <div class="wizard-options-grid">
-              <label class="wizard-select-card selected">
-                <input type="radio" name="wizard-service" value="familjeradgivning" checked>
+              <label class="wizard-select-card selected" for="service_familj">
+                <input type="radio" id="service_familj" name="wizard-service" value="familjeradgivning" checked>
                 <div class="triage-icon-wrap family" style="margin-bottom: 0.8rem;">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <h4>Familjerådgivning</h4>
                 <p>Parterapi, föräldrastöd eller samtal vid separation.</p>
               </label>
 
-              <label class="wizard-select-card">
-                <input type="radio" name="wizard-service" value="vigsel">
+              <label class="wizard-select-card" for="service_vigsel">
+                <input type="radio" id="service_vigsel" name="wizard-service" value="vigsel">
                 <div class="triage-icon-wrap wedding" style="margin-bottom: 0.8rem;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
                 </div>
@@ -426,8 +454,8 @@
                 <p>Förrättare för personlig eller klassisk ceremoni.</p>
               </label>
 
-              <label class="wizard-select-card">
-                <input type="radio" name="wizard-service" value="social">
+              <label class="wizard-select-card" for="service_social">
+                <input type="radio" id="service_social" name="wizard-service" value="social">
                 <div class="triage-icon-wrap social" style="margin-bottom: 0.8rem;">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 </div>
@@ -443,20 +471,20 @@
             <p class="step-desc">Vi anpassar oss efter dina önskemål och geografiska förutsättningar.</p>
 
             <div class="wizard-options-grid">
-              <label class="wizard-select-card selected">
-                <input type="radio" name="wizard-format" value="Digitalt (Online via video)" checked>
+              <label class="wizard-select-card selected" for="format_digital">
+                <input type="radio" id="format_digital" name="wizard-format" value="Digitalt (Online via video)" checked>
                 <h4>Digitalt videomöte</h4>
                 <p>Flexibelt och tryggt oavsett var i landet du bor via krypterad videolänk.</p>
               </label>
 
-              <label class="wizard-select-card">
-                <input type="radio" name="wizard-format" value="Fysiskt möte (Mottagning)">
+              <label class="wizard-select-card" for="format_physical">
+                <input type="radio" id="format_physical" name="wizard-format" value="Fysiskt möte (Mottagning)">
                 <h4>Fysisk mottagning</h4>
                 <p>Möt oss i våra lugna, avskilda och harmoniska samtalsrum.</p>
               </label>
 
-              <label class="wizard-select-card">
-                <input type="radio" name="wizard-format" value="Vald plats (För ceremoni/hembesök)">
+              <label class="wizard-select-card" for="format_custom">
+                <input type="radio" id="format_custom" name="wizard-format" value="Vald plats (För ceremoni/hembesök)">
                 <h4>På er valda plats</h4>
                 <p>För vigslar (festlokal, skärgård, trädgård) eller hembesök vid behov.</p>
               </label>
@@ -469,24 +497,27 @@
             <p class="step-desc">Ge oss gärna en kort bild av när och vad ärendet gäller.</p>
 
             <div class="form-grid">
-              <div class="form-group full-width">
-                <label>Önskad tidsram / Brådskandegrad</label>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                  <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 500; font-size: 0.9rem;">
-                    <input type="radio" name="wizard-urgency" value="Standard (Inom 1-2 veckor)" checked> Standard (Inom 1-2 veckor)
+              <fieldset class="form-group full-width form-fieldset">
+                <legend class="form-legend">Önskad tidsram / Brådskandegrad</legend>
+                <div class="radio-inline-group">
+                  <label for="urgency_standard" class="radio-label">
+                    <input type="radio" id="urgency_standard" name="wizard-urgency" value="Standard (Inom 1-2 veckor)" checked>
+                    <span>Standard (Inom 1-2 veckor)</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 500; font-size: 0.9rem;">
-                    <input type="radio" name="wizard-urgency" value="Brådskande (Inom 48 timmar)"> Brådskande (Inom 48 timmar)
+                  <label for="urgency_urgent" class="radio-label">
+                    <input type="radio" id="urgency_urgent" name="wizard-urgency" value="Brådskande (Inom 48 timmar)">
+                    <span>Brådskande (Inom 48 timmar)</span>
                   </label>
-                  <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: 500; font-size: 0.9rem;">
-                    <input type="radio" name="wizard-urgency" value="Framtida datum (t.ex. Vigseldatum)"> Specifikt framtida datum
+                  <label for="urgency_future" class="radio-label">
+                    <input type="radio" id="urgency_future" name="wizard-urgency" value="Framtida datum (t.ex. Vigseldatum)">
+                    <span>Specifikt framtida datum</span>
                   </label>
                 </div>
-              </div>
+              </fieldset>
 
               <div class="form-group full-width">
                 <label for="wizardNotes">Kort beskrivning av era önskemål eller situation (valfritt)</label>
-                <textarea id="wizardNotes" class="form-control" placeholder="T.ex: Vi planerar vigsel i augusti på Värmdö, eller: Vi behöver hjälp att förbättra vår kommunikation i småbarnsvardagen..."></textarea>
+                <textarea id="wizardNotes" name="notes" class="form-control" placeholder="T.ex: Vi planerar vigsel i augusti på Värmdö, eller: Vi behöver hjälp att förbättra vår kommunikation i småbarnsvardagen..."></textarea>
               </div>
             </div>
           </div>
@@ -518,17 +549,17 @@
             <div class="form-grid">
               <div class="form-group">
                 <label for="wizardName">För- och efternamn *</label>
-                <input type="text" id="wizardName" class="form-control" placeholder="Anna & Erik Andersson" required>
+                <input type="text" id="wizardName" name="name" class="form-control" placeholder="Anna & Erik Andersson" autocomplete="name" required>
               </div>
 
               <div class="form-group">
                 <label for="wizardEmail">E-postadress *</label>
-                <input type="email" id="wizardEmail" class="form-control" placeholder="anna@exempel.se" required>
+                <input type="email" id="wizardEmail" name="email" class="form-control" placeholder="anna@exempel.se" autocomplete="email" required>
               </div>
 
               <div class="form-group full-width">
                 <label for="wizardPhone">Telefonnummer</label>
-                <input type="tel" id="wizardPhone" class="form-control" placeholder="070-123 45 67">
+                <input type="tel" id="wizardPhone" name="phone" class="form-control" placeholder="070-123 45 67" autocomplete="tel">
               </div>
             </div>
           </div>
@@ -673,14 +704,14 @@
         <p>Bocka av punkterna direkt på sidan. Dina markeringar sparas automatiskt i webbläsaren.</p>
       </div>
 
-      <div class="knowledge-tabs">
-        <button class="tab-btn active" data-tab="tabVigsel">Checklista: Inför Vigsel</button>
-        <button class="tab-btn" data-tab="tabRelation">5 Nycklar: Parkommunikation</button>
-        <button class="tab-btn" data-tab="tabMyndighet">Guide: Myndighetsmöte</button>
+      <div class="knowledge-tabs" role="tablist" aria-label="Kunskapsbank och checklistor">
+        <button class="tab-btn active" role="tab" id="tabBtnVigsel" aria-selected="true" aria-controls="tabVigsel" data-tab="tabVigsel">Checklista: Inför Vigsel</button>
+        <button class="tab-btn" role="tab" id="tabBtnRelation" aria-selected="false" aria-controls="tabRelation" data-tab="tabRelation">5 Nycklar: Parkommunikation</button>
+        <button class="tab-btn" role="tab" id="tabBtnMyndighet" aria-selected="false" aria-controls="tabMyndighet" data-tab="tabMyndighet">Guide: Myndighetsmöte</button>
       </div>
 
       <!-- Tab Panel 1: Vigsel Checklista -->
-      <div class="tab-content-panel active" id="tabVigsel">
+      <div class="tab-content-panel active" id="tabVigsel" role="tabpanel" aria-labelledby="tabBtnVigsel">
         <div class="checklist-card">
           <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Checklista för er borgerliga vigsel</h3>
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Allt det formella och praktiska du behöver ha koll på innan ja-ordet.</p>
@@ -720,7 +751,7 @@
       </div>
 
       <!-- Tab Panel 2: Parkommunikation -->
-      <div class="tab-content-panel" id="tabRelation">
+      <div class="tab-content-panel" id="tabRelation" role="tabpanel" aria-labelledby="tabBtnRelation">
         <div class="checklist-card">
           <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">5 verktyg för sund parkommunikation</h3>
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Små förändringar i samtalet som gör stor skillnad för relationen.</p>
@@ -760,7 +791,7 @@
       </div>
 
       <!-- Tab Panel 3: Myndighetsguide -->
-      <div class="tab-content-panel" id="tabMyndighet">
+      <div class="tab-content-panel" id="tabMyndighet" role="tabpanel" aria-labelledby="tabBtnMyndighet">
         <div class="checklist-card">
           <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Förberedelse inför myndighetsmöte</h3>
           <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">Så känner du dig trygg och förberedd inför möten med Socialtjänst eller Försäkringskassa.</p>
@@ -801,7 +832,7 @@
       <div class="about-photo-wrapper">
         <div class="about-photo-card">
           <div class="about-avatar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
@@ -811,19 +842,19 @@
           
           <div class="about-credentials-list">
             <div class="cred-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               <span>Socionomexamen (210 hp), Stockholms Universitet</span>
             </div>
             <div class="cred-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               <span>Förordnad borgerlig vigselförrättare av Länsstyrelsen</span>
             </div>
             <div class="cred-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               <span>Vidareutbildning i systemisk familjeterapi och EFT</span>
             </div>
             <div class="cred-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               <span>Över 12 års erfarenhet av samtalsstöd och ceremonier</span>
             </div>
           </div>
@@ -841,7 +872,7 @@
         </p>
 
         <div class="ethics-box">
-          <h4>Vår etiska trygghetsgaranti</h4>
+          <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem;">Vår etiska trygghetsgaranti</h3>
           <p>Alla samtal och uppdrag omfattas av lagstadgad tystnadsplikt och strikt sekretess. Inga journaler eller uppgifter delas med utomstående parter utan ditt uttryckliga samtycke.</p>
         </div>
       </div>
@@ -859,7 +890,7 @@
         <p>Läs erfarenheter från par som vigt sig, familjer som fått verktyg och individer som fått socialt stöd.</p>
       </div>
 
-      <div class="reviews-filter">
+      <div class="reviews-filter" role="group" aria-label="Filtrera omdömen efter område">
         <button class="filter-btn active" data-category="all">Alla omdömen</button>
         <button class="filter-btn" data-category="vigsel">Vigslar</button>
         <button class="filter-btn" data-category="familj">Familjerådgivning</button>
@@ -870,7 +901,7 @@
         <!-- Review 1: Vigsel -->
         <div class="review-card" data-category="vigsel">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars" aria-label="Betyg: 5 av 5 stjärnor">★★★★★</div>
             <p class="review-text">"Karin skapade den mest fantastiska vigselakt vi kunde drömma om ute på klipporna i Sandhamn. Hennes ord var så personliga, varma och innerliga. Alla gäster berömde ceremonin!"</p>
           </div>
           <div class="review-author">
@@ -882,7 +913,7 @@
         <!-- Review 2: Familj -->
         <div class="review-card" data-category="familj">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars" aria-label="Betyg: 5 av 5 stjärnor">★★★★★</div>
             <p class="review-text">"Vi hade fastnat i destruktiva gräl efter att vårt andra barn föddes. Genom 4 samtal fick vi enkla, konkreta verktyg som räddade vår relation och gav oss tillbaka glädjen i vardagen."</p>
           </div>
           <div class="review-author">
@@ -894,7 +925,7 @@
         <!-- Review 3: Social -->
         <div class="review-card" data-category="social">
           <div>
-            <div class="review-stars">★★★★★</div>
+            <div class="review-stars" aria-label="Betyg: 5 av 5 stjärnor">★★★★★</div>
             <p class="review-text">"När min pappa blev svårt sjuk kände vi oss helt vilsna bland alla myndighetskrav. Karins sociala rådgivning gav oss överblick, kontakt med rätt instanser och ett enormt lugn."</p>
           </div>
           <div class="review-author">
@@ -912,7 +943,7 @@
   <aside class="safety-bar" aria-label="Akut stöd och resurser">
     <div class="container safety-content">
       <div class="safety-info">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         <div>
           <strong style="font-size: 0.92rem;">Är du eller någon närstående i akut fara eller kris?</strong>
           <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">Vid akut nödsituation, ring alltid <strong>112</strong>.</span>
@@ -946,7 +977,7 @@
         <div class="contact-channels">
           <div class="channel-item">
             <div class="channel-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div class="channel-text">
               <strong>Telefon (Telefontid mån-fre 08:30-17:00)</strong>
@@ -956,7 +987,7 @@
 
           <div class="channel-item">
             <div class="channel-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div class="channel-text">
               <strong>Direkt E-post</strong>
@@ -966,7 +997,7 @@
 
           <div class="channel-item">
             <div class="channel-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div class="channel-text">
               <strong>Mottagning & Område</strong>
@@ -984,16 +1015,16 @@
         <form id="quickContactForm" onsubmit="event.preventDefault(); showToast('Tack! Ditt meddelande har skickats.', 'success'); this.reset();">
           <div class="form-grid">
             <div class="form-group">
-              <label>Ditt namn</label>
-              <input type="text" class="form-control" required placeholder="Namn">
+              <label for="quickName">Ditt namn *</label>
+              <input type="text" id="quickName" name="name" class="form-control" required placeholder="Namn" autocomplete="name">
             </div>
             <div class="form-group">
-              <label>E-post</label>
-              <input type="email" class="form-control" required placeholder="namn@exempel.se">
+              <label for="quickEmail">E-post *</label>
+              <input type="email" id="quickEmail" name="email" class="form-control" required placeholder="namn@exempel.se" autocomplete="email">
             </div>
             <div class="form-group full-width">
-              <label>Ärende / Tjänst</label>
-              <select class="form-control">
+              <label for="quickService">Ärende / Tjänst</label>
+              <select id="quickService" name="service" class="form-control">
                 <option>Familjerådgivning / Parsamtal</option>
                 <option>Vigselförfrågan</option>
                 <option>Social Rådgivning & Stöd</option>
@@ -1001,14 +1032,14 @@
               </select>
             </div>
             <div class="form-group full-width">
-              <label>Meddelande</label>
-              <textarea class="form-control" rows="4" placeholder="Beskriv kort vad du vill ha hjälp med..." required></textarea>
+              <label for="quickMessage">Meddelande *</label>
+              <textarea id="quickMessage" name="message" class="form-control" rows="4" placeholder="Beskriv kort vad du vill ha hjälp med..." required></textarea>
             </div>
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
             <span>Skicka meddelande</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
         </form>
       </div>
@@ -1022,8 +1053,11 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="brand-logo" style="margin-bottom: 1rem; color: #ffffff;">
-            <img src="logo.png" alt="Livsstöd & Ceremonier Logotyp" class="brand-logo-img">
+          <a href="#top" class="brand-logo" style="margin-bottom: 1rem; color: #ffffff;" aria-label="Livsstöd & Ceremonier Hem">
+            <picture>
+              <source srcset="logo.webp" type="image/webp">
+              <img src="logo.png" alt="Livsstöd & Ceremonier Logotyp" class="brand-logo-img" width="44" height="44" loading="lazy" decoding="async">
+            </picture>
             <span>Livsstöd & Ceremonier</span>
           </a>
           <p>
@@ -1032,7 +1066,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Tjänster</h4>
+          <h3 class="footer-title">Tjänster</h3>
           <ul>
             <li><a href="#tjanster">Rådgivning för familjer</a></li>
             <li><a href="#tjanster">Vigselförrättare</a></li>
@@ -1042,7 +1076,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Verktyg & Guider</h4>
+          <h3 class="footer-title">Verktyg & Guider</h3>
           <ul>
             <li><a href="#bokning">Interaktiv Behovsguide</a></li>
             <li><a href="#artiklar">Checklista: Borgerlig vigsel</a></li>
@@ -1052,7 +1086,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Trygghet & Sekretess</h4>
+          <h3 class="footer-title">Trygghet & Sekretess</h3>
           <ul>
             <li><a href="#om">Länsstyrelseförordnande</a></li>
             <li><a href="#om">Socionomkompetens</a></li>
@@ -1067,9 +1101,9 @@
           &copy; 2026 Livsstöd & Ceremonier. Alla rättigheter förbehållna.
         </div>
         <div style="display: flex; gap: 1.5rem;">
-          <a href="#">Integritetspolicy</a>
-          <a href="#">GDPR & Sekretess</a>
-          <a href="#">Cookies</a>
+          <a href="#om">Integritetspolicy</a>
+          <a href="#om">GDPR & Sekretess</a>
+          <a href="#om">Cookies</a>
         </div>
       </div>
     </div>
@@ -1091,9 +1125,9 @@
   </div>
 
   <!-- Toast Container -->
-  <div class="toast-container" id="toastContainer"></div>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
   <!-- Script -->
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>

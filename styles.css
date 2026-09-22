@@ -4,7 +4,7 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette - Nordic Warmth, Trust & Celebration */
+  /* Color Palette - Nordic Warmth, Trust & Celebration (WCAG AA & AAA compliant) */
   --bg-main: #fbf9f5;
   --bg-surface: #ffffff;
   --bg-surface-alt: #f4efe6;
@@ -13,25 +13,25 @@
   --bg-dark-surface: #222d28;
 
   --text-primary: #1e2621;
-  --text-secondary: #4f5e55;
-  --text-muted: #798a80;
+  --text-secondary: #425248;
+  --text-muted: #54665c;
   --text-light: #f7f9f7;
   --text-light-muted: #b0c0b7;
 
   --sage-50: #f0f5f2;
   --sage-100: #dce7e1;
   --sage-500: #4a6f5d;
-  --sage-600: #3b5a4b;
-  --sage-700: #2c4438;
-  --sage-900: #1b2d24;
+  --sage-600: #345243;
+  --sage-700: #253b30;
+  --sage-900: #14221b;
 
-  --terracotta-500: #c46d4e;
-  --terracotta-600: #a8583c;
+  --terracotta-500: #b95d3c;
+  --terracotta-600: #93452a;
   --terracotta-100: #faeee9;
 
-  --gold-accent: #c99a45;
+  --gold-accent: #b0812e;
   --gold-light: #f7edd9;
-  --gold-dark: #9d752e;
+  --gold-dark: #7c5818;
 
   --border-subtle: #e6ded2;
   --border-strong: #c8beaf;
@@ -46,7 +46,7 @@
   --radius-xl: 32px;
   --radius-pill: 9999px;
 
-  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +63,7 @@
   --bg-dark-surface: #141b17;
   --text-primary: #f3f7f4;
   --text-secondary: #c0cfc7;
-  --text-muted: #85998f;
+  --text-muted: #9ab0a5;
   --text-light: #f7f9f7;
   --text-light-muted: #b0c0b7;
   --border-subtle: #293830;
@@ -1138,6 +1138,37 @@ img {
   grid-column: 1 / -1;
 }
 
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-legend {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  padding: 0;
+  display: block;
+}
+
+.radio-inline-group {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
 .form-group label {
   font-size: 0.88rem;
   font-weight: 600;
@@ -1714,10 +1745,14 @@ textarea.form-control {
   line-height: 1.6;
 }
 
-.footer-col h4 {
+.footer-col h4,
+.footer-col .footer-title,
+.footer-title {
   color: #ffffff;
   font-size: 1.05rem;
   margin-bottom: 1.2rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
 }
 
 .footer-col ul {

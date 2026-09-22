@@ -328,10 +328,14 @@ function initChecklists() {
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
+      tabBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       tabPanels.forEach(p => p.classList.remove('active'));
 
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
       const target = btn.getAttribute('data-tab');
       const activePanel = document.getElementById(target);
       if (activePanel) {
@@ -556,8 +560,7 @@ function initScrollAnimations() {
     '.about-text-content',
     '.review-card',
     '.contact-info-card',
-    '#quickContactForm',
-    '.hero-visual-card'
+    '#quickContactForm'
   ];
 
   const elementsToAnimate = document.querySelectorAll(targetSelectors.join(', '));
